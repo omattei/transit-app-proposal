@@ -35,19 +35,20 @@
 \maketitle
 
 \begin{abstract}
-\hl{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis semper
-    ligula. Nam metus quam, condimentum in leo at, pellentesque pretium ipsum.
-    Sed lacus velit, sollicitudin sed turpis non, suscipit feugiat elit. Etiam
-    convallis tristique purus, eget tempus leo venenatis id. Curabitur interdum
-    semper ante at tristique. Praesent accumsan neque eu justo volutpat
-    fermentum. Cras ultricies quam id lorem sodales pulvinar. Curabitur
-    ullamcorper ex et sem rhoncus, vel pharetra libero laoreet. Sed dui massa,
-    suscipit non sagittis non, imperdiet ac mi. Aliquam fermentum mi et risus
-    ullamcorper, non aliquet enim rhoncus. Fusce bibendum pharetra erat eget
-    finibus.
-}
 
-\bigskip
+    A proposal is presented regarding aesthetic and functional improvements to
+    the Charlottesville Area Transit (CAT) mobile app. A peer application and the
+    community context surrounding the app are considered. Recommendations
+    center on making the app more accessible to a wider community, and
+    streamlining the graphical user interface for rapid information retrieval.
+    Given that CAT serves a historic college town, the improvements suggested
+    are believed to optimize route visualization and timing, while increasing
+    revenue by recognizing more affluent customers
+    (who are more likely than others to own a smartphone) along
+    with the traditional working-class commuter base.
+
+
+    \bigskip
     \noindent \emph{Keywords}: {\tt Charlottesville Area Transport, public transport, mobile app}
 \end{abstract}
 
@@ -60,7 +61,7 @@ A developed country is not a place where the poor have cars. It's where the rich
 \end{quote}
 
 \section{Problem Definition}
-In 2014, the Charlottesville Area Transit [CAT] organization commissioned a new
+In 2014, the Charlottesville Area Transit (CAT) organization commissioned a new
 mobile app meant to help bus riders better understand their public
 transportation options and reduce dependence on the outdated phone-based
 timetable system (NBC29 WVIR Charlottesville, 2014). Though basically
@@ -153,19 +154,78 @@ app. If funding permits, developers might add on to this integration by
 introducing phone notifications when a bus is about to arrive at the
 current stop or left-right swiping to switch between one widget and the next.
 
-\subsection{Enhanced Integration of Timetable Feature}
- - TransLoc does it better
- - cite TransLoc app too
- - time table is pretty important!
+\subsection{Lessons to Learn from Peer Software}
+In this section, we will present the TransLoc (2015) mobile app as a point of
+comparison. The TransLoc app is designed to perform the same overall
+function as the CAT app, and is is recommended by the University of Virginia
+to students as a way of visualizing their University Transit Service routes.
+
+A quick comparison of the apps shows some distinct advantages to either app.
+For one, the CAT app features much building shapes and more map features,
+perhaps making it more useful to travelers navigating city streets on foot.
+However, the TransLoc app details stops in a much more effective way than
+the CAT app. Points of transfer between two or more different bus lines are
+visualized using a pie chart, where a circle is evenly divided into colors
+representing each route. The CAT app requires to the user to go through the
+additional steps of twice tapping on a CAT icon to reveal the timetable,
+showing all available buses through that stop. No visual aid is provided in
+the application to show transfer points on the system map.
+
+Because the transit system is inherently time-based, the additional steps
+necessary to view stop information and time tables in the CAT app present
+a particularly inefficient solution to the end user's needs. The goal of
+the CAT app would be better met by implementing a combined stop information/%
+timetable interface, as found in Fig.~\ref{fig:TL_mobile_2}.
+
+Along a similar vein of logic, we find in Fig.~\ref{fig:cat_mobile_1} that the
+CAT app fails to adequately depict shared routes---stop \textnumero{}11129 is
+shared by both Route 7 and the Free Trolley, yet only Route 7 is shown
+intersecting with it on the map. In contrast, TransLoc (refer to
+Fig.~\ref{fig:TL_mobile_1}) solves this problem by using dashed lines of
+alternating color to demonstrate that both routes travel past a given stop.
+
+\begin{figure}[ph!]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{TL_mobile_1}
+    \caption{Visualization of the University Transit System}
+  \label{fig:TL_mobile_1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{TL_mobile_2}
+  \caption{View of a timetable for a specific stop}
+  \label{fig:TL_mobile_2}
+\end{subfigure}
+    \caption{The TransLoc Transit Visualization mobile app, depicted on a Samsung Galaxy S4 running Android Lollipop (version 5.0.1). University of Virginia--UTS routes shown. Published by TransLoc (2015).}
+\label{fig:TL_mobile}
+\end{figure}
 
 \subsection{Application Stability}
+From anecdotal evidence, it appears that the CAT mobile app tends to freeze on
+a loading screen or crash entirely at certain points. The cause is believed to be transferring from one networked access point to another, or from Wi-Fi to mobile data. Further quality assurance ought to be implemented subject to improved source code access.
 
 \section{Expected Results}
-\hl{ - poor need public transit the most (Taylor \& Morris, 2015)
-What information do you intend to learn from this project? What results do you expect to present? Are you trying to design an interface to maximum profits? To maximize traffic? To minimize frustration? At the end of the semester, what solution will you present and why is it important?
+We believe that implementing these suggested changes will significantly enhance
+the user experience and improve access to public transit---especially amongst
+those unfamiliar with the area, where easy to follow transportation directions
+are key to successful tourism. As it stands currently, the Charlottesville Area
+Transit app is rated at 4.0 out of 5.0 stars on the Google Play Store. An improved
+app is likely to garner more positive reviews, which in turn will effect in
+increased downloads and revenue streams.
 
-Etiam dapibus ac dui sit amet vestibulum. Nulla faucibus odio vel augue ultrices, non eleifend sapien suscipit. Pellentesque rutrum, leo ut lobortis ornare, odio augue mattis eros, sit amet tristique quam elit nec nibh. Proin lacinia sollicitudin ullamcorper. Fusce fermentum vitae orci ut feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut vitae massa libero. Integer dictum consequat neque posuere pretium. Nulla sed ligula sodales, ultrices quam a, elementum nunc. In in orci quis nisl varius euismod. Quisque lobortis mauris et porta dapibus. Etiam sed erat vehicula, consectetur arcu ac, venenatis orci. Morbi dapibus est eget mauris auctor pulvinar. Curabitur at leo vel arcu sollicitudin scelerisque a in eros. Duis sit amet blandit mi, ac luctus felis. Vestibulum sodales efficitur ex, ac dictum lorem rhoncus ac.
-}
+Taylor \& Morris (2015) suggest that transit generally acts at a low level of
+cost-effectiveness. By including not only transit typical customers, who tend
+to be less affluent, but tourists and students in the target audience, one may
+expect revenue to increase. Tourists tend to spend more money on more trips
+than do commuters, who are more likely to purchase several days' worth of rides
+at a time; and an increased student-rider population provides CAT with more
+bargaining power with the University of Virginia and/or Piedmont Virginia
+Community College, who subsidize their students' tickets.
+
+In short, accepting this proposal is expected to increase customer satisfaction,
+improve access to public transit options, and raise additional revenue.
 
 \section{Acknowledgements}
 The author wishes to recognize Luther Tychonievich, Ph.D, lecturer at the
@@ -194,5 +254,7 @@ NBC29 WVIR Charlottesville (2014, 28 February). CAT riders can monitor bus statu
 
 Taylor, B.D. \& Morris, E.A. Transportation (2015) Public transportation objectives and rider demographics:
 are transit’s priorities poor public policy? \emph{Transportation}, 42, 347--367. doi:10.1007/s11116-014-9547-0
+
+TransLoc (2015, 27 April). TransLoc transit visualization [Mobile application software]. Retrieved from \url{https://play.google.com/store/apps/details?id=com.transloc.android}.
 \end{document}
 
